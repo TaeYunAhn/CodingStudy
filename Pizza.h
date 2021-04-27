@@ -7,6 +7,24 @@ enum EN_SOURCE
     EN_GO,
 };
 
+//// 1번
+//typedef struct s_point
+//{
+//    int aa;
+//} t_point;
+//
+//// 2번
+//struct s_point
+//{
+//   int aa;
+//};
+//typedef s_point t_point;
+
+/// 1번과 2번은 같다.
+
+//typedef std::map<int, vector<std::string>> intVecMap;
+
+
 struct Pizza
 {
     // 생성자 및 소멸자

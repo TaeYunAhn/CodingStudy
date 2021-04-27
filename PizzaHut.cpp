@@ -6,6 +6,9 @@ CPizzaHut::CPizzaHut()
 {
     cheezeCount = 1000;
     money = 1000000;
+    aa = new int;
+    *aa =3;
+    pSimple = new CSimple;
 }
 
 CPizzaHut::CPizzaHut(std::string _name)
@@ -15,12 +18,18 @@ CPizzaHut::CPizzaHut(std::string _name)
     name = _name;
 }
 
-CPizzaHut::~CPizzaHut()
+CPizzaHut::CPizzaHut(CSimple* simple)
 {
+    pSimple = simple;
 }
 
+CPizzaHut::~CPizzaHut()
+{
+        delete aa;
+        delete pSimple;
+}
 
-Pizza CPizzaHut::makePizza(EN_PIZZA_CATEGORY category)
+Pizza CPizzaHut::makePizza(EN_PIZZA_CATEGORY category) const
 {
     Pizza pizza;
     switch ( category )
@@ -59,4 +68,55 @@ Pizza CPizzaHut::makePizza(EN_PIZZA_CATEGORY category)
 void CPizzaHut::printStoreInfo()
 {
     cout << "현재 치즈 개수: " << cheezeCount << ", 돈: " << money << endl;
+
+    CSimple s;
+    s.a;
+}
+
+void CPizzaHut::setInfo(std::string name, int cheezeCount, int money, int aaa)
+{
+    this->name = name;
+    this->cheezeCount = cheezeCount;
+    this->money = money;
+}
+
+bool CPizzaHut::process(const int& count, int& result)
+{
+    if ( count == 0 )
+    {
+        result = count + 100;
+        return false;
+    }
+    else
+    {
+        result = count - 100;
+        return true;
+    }
+}
+
+int CPizzaHut::process(int count)
+{
+    if ( count == 0 )
+    {
+        return count + 100;
+    }
+    else
+    {
+        return count - 100;
+    }
+}
+
+bool CPizzaHut::overLoading(const int a)
+{
+    return a == 5;
+}
+
+bool CPizzaHut::overLoading(double a)
+{
+    return a == 3;
+}
+
+bool CPizzaHut::overLoading(double a, int b)
+{
+    return a == b;
 }

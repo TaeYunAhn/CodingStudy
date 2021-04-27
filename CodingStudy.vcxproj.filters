@@ -17,12 +17,18 @@
     <ClCompile Include="PizzaHut.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Simple.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Pizza.h">
       <Filter>소스 파일</Filter>
     </ClInclude>
     <ClInclude Include="PizzaHut.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Simple.h">
       <Filter>소스 파일</Filter>
     </ClInclude>
   </ItemGroup>
